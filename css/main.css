@@ -1,11 +1,287 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap');
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
-* {margin: 0; padding: 0;}
-a {color:inherit; text-decoration: inherit;}
-li {list-style: none;}
-address, em, i { font-style: normal;}
-h1, h2, h3, h4, h5,h6 {font-size: inherit;}
-a:hover { text-decoration: none; color:inherit;}
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+address,
+em,
+i {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* layout */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    padding-top: 30px;
+    /* background: yellow; */
+    position: fixed;
+    z-index: 20;
+}
+
+header .inner-header {
+    /* background: blue; */
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 80px;
+}
+
+header .inner-header .logo {
+    width: 170px;
+    height: 60px;
+    /* background: red; */
+    margin-right: 180px;
+}
+
+header .inner-header .logo a {
+    display: block;
+    width: 100%;
+    /* background: green; */
+    height: 100%;
+}
+
+header .inner-header .logo a img {
+    width: 100%;
+}
+
+header .inner-header .logo a img:nth-child(2) {
+    opacity: 0;
+}
+
+header .inner-header .intro-text {
+    
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 70px;
+}
+
+header .inner-header .menu-open {
+    
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+header .inner-header .menu-open span {
+    margin-left: 15px;
+    font-size: 33px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -6px;
+}
+
+/* section visual */
+section.visual {
+    position: relative;
+}
+
+section.visual .slide li {
+    width: 100%;
+    height: 100vh;
+    background: #222;
+    position: relative;
+}
+
+section.visual .slide li img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+section.visual .slide li .txt {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+}
+
+section.visual .slide li .txt h3 {
+    font-size: 64px;
+    margin: 30px 0;
+    line-height: 1.3;
+}
+
+section.visual .slide li .txt a {
+    display: inline-block;
+}
+
+section.visual .slide li .txt a span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+section.visual .slide li .scroll {
+    position: absolute;
+    left: 50px;
+    bottom: 10%;
+    color: #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    transform: rotate(-90deg);
+}
+
+/* section contents */
+section.contents {
+    background: #1b1b1b;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+section.contents .main-text {
+    width: 1170px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+
+section.contents .main-text::after {
+    content: '”'; /* ㄴ 한자 */
+    font-size: 300px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+section.contents .main-text::before {
+    content: '';
+    position: absolute;
+    background: #ffec03;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50px;
+    top: 100px;
+}
+
+section.contents .main-text h3 {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.2;   
+    flex: 1; 
+    background: red;
+}
+
+section.contents .main-text p {
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    background: blue;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+section.contents .main-text p span {
+    display: block;
+    margin-top: 30px;
+}
