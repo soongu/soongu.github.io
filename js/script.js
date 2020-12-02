@@ -1,12 +1,12 @@
 'use strict';
 
-$(document).on('click', 'a[href="#"]', function(e){
+$(document).on('click', 'a[href="#"]', function(e) {
     e.preventDefault();
 });
 
-//gnb메뉴
-$(function(){
-    $('header .menuOpen').on('click', function(){
+//gnb 메뉴
+$(function() {
+    $('header .menu-open').on('click', function() {
         $('.gnb').addClass('on');
     });
     $('.gnb .close, section').on('click', function(){
@@ -14,44 +14,55 @@ $(function(){
     });
 });
 
-//fixHeader
+//fix header
 var scrollTop = 0;
 scrollTop = $(document).scrollTop();
+
+//고정헤더 함수
+function fixHeader() {
+    if (scrollTop > 150) {
+        $('header').addClass('on');
+    } else {
+        $('header').removeClass('on');
+    }
+}
+
 fixHeader();
 
 //윈도우창 조절시 이벤트
-$(window).on('scroll resize', function(){
+$(window).on('scroll resize', function() {
     scrollTop = $(document).scrollTop();
     fixHeader();
+    hideGoTop();
 });
 
-//고정해더 함수
-function fixHeader() {
-  if(scrollTop > 150) {
-   $('header').addClass('on');
-  } else {
-      $('header').removeClass('on');
-  }
-}
-
-//스크롤 애니메이션
-$(function(){
+//스크롤라 애니메이션
+$(function() {
     $('.animate').scrolla({
         mobile: false,
         once: false
     });
 });
 
-
-//상단으로 부드럽게
-$(function(){
-    $('.goTop').on('click', function(){
-        $('html, body').animate({ scrollTop : 0 }, 400 );
+//맨 위로 이동 부드럽게 이동하기
+$(function() {
+    $('.go-top').on('click', function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
     });
 });
 
-//.top-visual 이미지슬라이드
+//맨 위로 이동버튼 중간부터 나오게하기
+function hideGoTop() {
+    if (scrollTop < 800) {
+        $('.go-top').addClass('hide');
+    } else {
+        $('.go-top').removeClass('hide');
+    }
+}
 
+//.top-visual 이미지슬라이드
 $(function(){
     $(".visual .slide").slick({
         arrows: true, //화살표
@@ -63,15 +74,3 @@ $(function(){
         PauseOnFocus: false
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
