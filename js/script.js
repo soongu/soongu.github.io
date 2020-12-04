@@ -6,13 +6,32 @@ $(document).on('click', 'a[href="#"]', function(e) {
 
 //gnb 메뉴
 $(function() {
-    $('header .menu-open').on('click', function() {
+    var menuBtn = $('header .menu-open');
+    var closeBtn = $('.gnb .close');
+    var isMenuOpen = false;
+    menuBtn.on('click', function() {
         $('.gnb').addClass('on');
     });
     $('.gnb .close, section').on('click', function(){
         $('.gnb').removeClass('on');
     });
+    //메뉴 토글
+    $('body').on('keyup', function (e) {
+        e.preventDefault();
+        if (e.keyCode === 27) {
+            if (!isMenuOpen) {
+                menuBtn.click();
+                isMenuOpen = true;
+            } else {
+                closeBtn.click();
+                isMenuOpen = false;
+            }
+        }
+    });
 });
+
+
+
 
 //fix header
 var scrollTop = 0;
