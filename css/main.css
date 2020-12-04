@@ -176,7 +176,7 @@ header .inner-header .menu-open {
     margin-top: 20px;
 }
 
-header .inner-header .menu-open span {
+header .inner-header .menu-open .menu-img {
     margin-left: 15px;
     font-size: 33px;
     display: inline-block;
@@ -596,25 +596,14 @@ section.contents .partner h3 {
 }
 
 section.contents .partner ul {
-    display: flex;
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 section.contents .partner ul li {
-    width: 29%;
     height: 100px;
     margin-top: 80px;
     text-align: center;
-}
-
-section.contents .partner ul li:nth-child(4n - 3) {
-    width: 21%;
-    text-align: left;
-}
-
-section.contents .partner ul li:nth-child(4n) {
-    width: 21%;
-    text-align: right;
 }
 
 section.contents .partner ul li img {
