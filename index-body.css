@@ -1,0 +1,162 @@
+#main {
+    display: flex;
+    flex-direction: row;
+
+    height: 1080px;
+    margin: 15px 0;
+}
+
+#main .contains {
+    display: flex;
+
+    width: 80%;
+    height: 100%;
+    padding: 0 20px;
+
+    align-items: center;
+}
+
+#main .contains .contents {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* name - container css 는  indexl-login.css 에 만들어둠 */
+/*#main .contains .contents .name-container {}*/
+
+/*게임박스 사진 css */
+/*hover 효과는 index-body-main-game.css*/
+#main .contains .contents .main-game {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+#main .contains .contents .main-game div {
+    display: flex;
+    justify-content: normal;
+    justify-items: end;
+}
+
+#main .contains .contents .main-game .game-nav .nav {
+    position: relative;
+    display: flex;
+
+
+    width: 100%;
+    height: 700px;
+    margin: 15px auto;
+
+    background: linear-gradient(-45deg, #8ffada, #bbe8f7, #dfe8eb);
+    opacity: 0.8;
+
+    box-shadow: 1px 1px 10px #333;
+}
+
+#main .contains .contents .main-game .game-nav .nav:hover {
+    background: linear-gradient(-45deg, #efe4f3, #bbe8f7, #efe4f3);
+    opacity: 0.8;
+}
+
+
+#main .contains .contents .main-game .game-nav .nav .game {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#main .contains .contents .main-game .game-nav .nav .game .game-img img {
+    object-fit: fill;
+}
+
+
+/* button css begin*/
+button {
+    all: unset;
+}
+
+#main .contains .contents .main-game .game-nav-sub {
+    display: flex;
+    height: 10%;
+}
+
+#main .contains .contents .main-game .game-nav-sub .nav-sub {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 10px auto 0;
+    width: 100%;
+}
+
+#main .contains .contents .main-game .game-nav-sub .nav-sub .btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 10px 0;
+    margin: 0 auto;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+/* 광고 --------------- */
+
+
+#main .banner1 {
+    width: 15%;
+    overflow: hidden;
+    height: 100%;
+
+    box-shadow: 1px 1px 10px #333;
+}
+
+#main .banner1 img {
+    display: block;
+
+
+    margin-bottom: 13px;
+    width: 100%;
+    height: min-content;
+
+    object-fit: cover;
+}
+
+#main .banner2 {
+    width: 15%;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 1px 1px 10px #333;
+    display: block;
+
+    height: fit-content;
+
+}
+
+#main .banner1 img {
+    display: block;
+
+
+    margin-bottom: 13px;
+    width: 100%;
+    height: min-content;
+
+    object-fit: fill;
+}

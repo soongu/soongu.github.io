@@ -1,0 +1,33 @@
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css');
+
+/* common style */
+* {
+    box-sizing: border-box;
+}
+
+/* body 선택자에 기본 폰트크기와 글꼴을 넣어주세요
+ * 폰트는 추후에 적용 예정
+ */
+body {
+    font-size: 18px;
+}
+
+/* 추가 reset사항이 있으면 아래에 적어주세요. 
+ * Push 전에 미리 말씀해주세요. 
+ */
+ 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,148 @@
+#wrraper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#header {
+    height: 300px;
+    background: url('main/img/wave.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#header .contains {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+
+}
+
+/* begin header title-img */
+
+#header .contains .title-img {
+    flex: 1;
+    position: relative;
+    /* border: 2px solid red; */
+
+}
+
+#header .contains .title-img>* {
+    width: 100%;
+
+}
+
+#header .contains .title-img .imleft {
+    /* border: 3px solid #000; */
+    background: url('main/img/seaweed.webp') no-repeat left / contain;
+    height: 100%;
+
+}
+
+#header .contains .title-img .imright {
+    background: url('main/img/brainimage.png') no-repeat center / contain;
+
+    position: absolute;
+
+    top: 25%;
+    left: 40%;
+    height: 70%;
+
+    animation: move 1s ease-in-out;
+    animation-fill-mode: both;
+
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0%, 0%);
+
+    }
+
+    50% {
+        transform: translate(30%, 0%) rotate(-20deg);
+    }
+
+    100% {
+
+        transform: translate(30%, 0%) rotate(360deg);
+    }
+}
+
+/* begin header title */
+
+#header .contains .title {
+    flex: 3;
+    /* border: 3px solid #000; */
+    height: 100%;
+    word-spacing: 2%;
+    line-height: 110px;
+    font-weight: 400;
+    font-size: 3em;
+    /*  font-size: 4em; */
+    padding: 40px 0 0 20px;
+    font-family: 'Black Han Sans', sans-serif;
+    text-shadow: 3px 3px 5px rgba(247, 244, 244, 0.8);
+
+    position: relative;
+
+}
+
+#header .contains .title em {
+    font-size: 1.7em;
+    color: rgb(242, 242, 246);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+#header .contains .title #green {
+    color: rgb(252, 208, 11);
+}
+
+
+#header .contains .title #logoImage {
+    /* border: 1px solid #000; */
+    background: url('main/img/1.png') no-repeat;
+    background-size: contain;
+    width: 20%;
+    height: 50%;
+
+    position: absolute;
+    z-index: 10px;
+    top: 30%;
+    right: -5%;
+
+    /* animation: move 2s ease-in-out; */
+    animation: rotation 2s linear infinite;
+    animation-duration: alternate-reverse;
+}
+
+@keyframes rotation {
+
+    0% {
+        transform: translate(0, 20%);
+    }
+
+    250% {
+        transform: translate(0, 0%);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+
+}
+
+/* begin header sub-img */
+#header .contains .sub-img {
+    flex: 1;
+    /* border: 2px solid #000; */
+    background: url('main/img/seaweed.webp') no-repeat right / cover;
+
+}

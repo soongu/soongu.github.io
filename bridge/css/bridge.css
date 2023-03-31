@@ -1,0 +1,214 @@
+
+
+/*brige-game css begin*/
+.contains .contents .main-game .game-nav .bridge-game {
+    display: flex;
+    border-radius: 50px;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/*bridge-game 하위 클래스 3개 비율을 위해 생성함*/
+.contains .contents .main-game .game-nav .bridge-game #bridge-left {
+    flex: 1;
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start{
+    flex: 7;
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-right{
+    flex:1;
+}
+/*-------------------------------------------*/
+
+.contains .contents .main-game .game-nav .bridge-game div {
+    display: flex;
+    flex-grow: initial;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*brige-game css begin*/
+
+/*게임판 중 가장 왼쪽 시작*/
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-left {
+    /*flex: 1;*/
+
+    /*width: 10%;*/
+
+}
+
+/*게임판 중 가장 왼쪽 종료*/
+
+
+/*메인게임 시작*/
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start {
+    width: 80%;
+    height: 100%;
+    /*background: white;*/
+}
+
+/*게임을 감싸는 전체 컨테이너*/
+.contains .contents .main-game .game-nav .bridge-game
+.bridge-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /*align-content: center;*/
+    /*align-items: center;*/
+
+}
+
+/*전체적인 틀 확인하기 위한 코드*/
+.content, .start, .finish, .character, .bridge-pannel, .left, .right {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid lightslategray;*/
+    box-sizing: border-box;
+}
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .start{
+    overflow: hidden;
+}
+
+#char-start, #char-finish {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content  img {
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    object-fit:cover;
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .start #char-start{
+    display: flex;
+    margin-top: 680px;
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .finish #char-finish {
+    display: flex;
+    margin-top: 20px;
+}
+
+/*bridge-content 하위 클래스 3개 비율을 위해 생성함*/
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .start{
+    flex: 1;
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel {
+    flex: 4;
+
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .finish {
+    flex: 1;
+
+}
+/*---------------------------------------------*/
+
+
+
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+    width: 70%;
+    height: 80%;
+    margin: auto;
+
+}
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    /*background-color: #c1b8aa;*/
+}
+
+
+/*노란판 속성*/
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel .glass {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    border: 5px ridge rgba(141, 155, 169, 0.59);
+    border-radius: 50%;
+    margin: auto;
+    /*border-style: ;*/
+    box-shadow: rgba(141, 155, 169,59);
+}
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel button:active {
+    background-color: rgba(139, 0, 0, 0.28);
+            /*url("../bridge-img/bridge-img-girl1.jpg");*/
+    /*background-image: url("/bridge/bridge-img/bridge-img-girl1.jpg");*/
+}
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel .glass:hover {
+    cursor: pointer;
+    /*background-color: rgba(136, 212, 226, 0.44);*/
+}
+
+.contains .contents .main-game .game-nav .bridge-game #bridge-start
+.bridge-container .bridge-content .bridge-pannel .glass div {
+}
+
+
+
+/*메인게임 종료*/
+
+
+/*게임판 중 가장 오른쪽 시작*/
+.contains .contents .main-game .game-nav .bridge-game #bridge-right {
+    width: 10%;
+
+}
+
+/*게임판 중 가장 오른쪽 종료*/

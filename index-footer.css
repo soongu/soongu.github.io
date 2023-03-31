@@ -1,0 +1,342 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+#footer {
+    height: fit-content;
+    background: url("/main/img/footer-back.png");
+    background-position-y: 900px;
+}
+
+#footer .contains {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+
+}
+
+#footer .contains .title {
+    height: 80%;
+    width: 100%;
+}
+
+#footer .contains .title .nav {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    background-position-y: 650px;
+}
+
+
+#footer .contains .title .nav .game {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+
+}
+
+#footer .contains .title .nav .game .box {
+    position: absolute;
+
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 150px;
+    height: 150px;
+
+}
+
+#footer .contains .title .nav .game .box:hover .info {
+    display: block;
+    /* opacity: 0.25;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); */
+
+    /* transform: scale(1); */
+    /* transition-delay: 5s; */
+    /* transition-duration: 5s; */
+
+    height: 250px;
+    width: 250px;
+
+    opacity: 1;
+}
+
+#footer .contains .title .nav .game .box:hover .img .common {
+    /* transform: scale(1.2); */
+
+    width: 180px;
+    height: 180px;
+}
+
+
+
+
+#footer .contains .title .nav .game .box .info {
+    border: 5px solid rgb(64, 224, 208);
+
+    background: rgb(255, 255, 255);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 1.4;
+
+    opacity: 0;
+    top: -120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease 1s 0s;
+}
+
+#footer .contains .title .nav .game .box .info .info-back {
+    background: url("main/img/footer-info.png") no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+
+    font-weight: 700;
+    color: #000000;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+
+}
+
+#footer .contains .title .nav .game .box .img {
+    width: 100%;
+    height: 80%;
+}
+
+#footer .contains .title .nav .game .box .img .common {
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background: url("/main/img/footer-nav.png") no-repeat center / cover;
+
+    animation: rotate_image_footer 12s infinite Linear;
+
+    transition: all ease 1s 0s;
+}
+
+#footer .contains .title .nav .game .sub-title {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #fff;
+
+    position: relative;
+    top: -50%;
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+
+    line-height: 1.2;
+}
+
+#footer .contains .title .nav .game .sub-title span {
+    color: #000;
+    font-size: 0.7em;
+    display: block;
+}
+
+#footer .contains .copy-right {
+    background: rgba(181, 187, 181, 0.1);
+
+    width: 100%;
+    height: 20%;
+
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 0.8em;
+    color: #000;
+}
+
+
+#footer .contains .gnb .help {
+    background: url("/main/img/footer-gnb.png") no-repeat center/cover;
+
+    border-radius: 50%;
+
+    position: fixed;
+    top: 80%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#footer .contains .gnb .help:hover .title {
+    display: block;
+}
+
+#footer .contains .gnb .help .title {
+    position: absolute;
+
+    top: -250%;
+    left: -200%;
+    transform: translate(-50%, -50%);
+
+    /* background: url("/main/img/footer-gnb-back1.png") no-repeat center / cover; */
+
+    width: 200px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+#footer .contains .gnb .help .title .nav {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: cneter;
+    align-items: center;
+
+    border: 1px solid red;
+}
+
+#footer .contains .gnb .help .title .nav .info {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: cneter;
+    align-items: center;
+}
+
+#footer .contains .gnb .help .title .nav .info .menu {
+    width: 60px;
+    height: 60px;
+
+    align-items: center;
+    text-align: center;
+}
+
+#footer .contains .gnb .help .title .nav .info .imleft {
+    background: url("main/img/footer-call.png") no-repeat center/cover;
+}
+
+#footer .contains .gnb .help .title .nav .info .imright {
+    background: url("main/img/footer-email.png") no-repeat center/cover;
+}
+
+#footer .contains .gnb .help .title .nav .info .img3 {
+    background: url("main/img/footer-instagram.png") no-repeat center/cover;
+}
+
+#footer .contains .gnb .help .title .nav .info .img4 {
+    background: url("main/img/footer-facebook.png") no-repeat center/cover;
+}
+
+#footer .contains .gnb .help .title .nav .info .img5 {
+    background: url("main/img/footer-web.png") no-repeat center/cover;
+}
+
+
+
+#footer .contains .gnb .help .title .nav .info .img {
+    border: 1px solid rgb(48, 120, 203);
+    width: 50%;
+}
+
+#footer .contains .gnb .help .title .nav .info .back-imleft {
+    top: 20%;
+}
+
+#footer .contains .gnb .help .title .nav .info .back-imright {
+    top: 60%;
+}
+
+#footer .contains .gnb .help .title .nav .info .back-img3 {
+    top: 100%;
+}
+
+/*
+   end footer ----------------------------------------->
+*/
+
+
+
+/*
+   begin footer animation ---------------------------------->
+*/
+
+/* 무한 회전 애니메이션 */
+@keyframes rotate_image_footer {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes rotate_image {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* animation: transY 2s ease-in-out infinite; */
+@keyframes transY {
+    0% {
+        /*  // 이 top 기준으로 400px 내려간 곳에서 시작할거다 
+         // 처음에는 가려놓고 */
+        transform: translateY(400px);
+        opacity: 0;
+    }
+
+    100% {
+        /*// 마지막에 슬슬 보여주기 // 그리고 도착지는 원래 지점 */
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes displace {
+    0% {
+
+        background-position: center 0;
+    }
+
+    50% {
+        background-position: center 600px
+    }
+
+    100% {
+        background-position: center 1200px
+    }
+}
+
+
+/*
+   end footer animation ---------------------------------->
+*/

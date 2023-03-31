@@ -1,0 +1,91 @@
+/* name-container 박스*/
+#main .contains .contents .name-container {
+    font-family: 'Dongle', sans-serif;
+
+    position: center;
+    /*margin-top: 50px;*/
+    color: black;
+    /*background-image: url("/name-img/cardchange.png");*/
+    background: linear-gradient(-45deg, #8ffada, #bbe8f7, #dfe8eb);
+    opacity: 0.8;
+
+    width: 100%;
+    height: 30%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #333;
+
+}
+
+#main .contains .contents .name-container:hover {
+    background: linear-gradient(-45deg, #efe4f3, #bbe8f7, #efe4f3);
+    opacity: 0.8;
+}
+
+#main .contains .contents .name-container .title {
+
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #3046c3;
+
+    position: relative;
+    padding: 30px 0;
+
+    font-weight: 900;
+    text-shadow: #333 1px 1px;
+
+}
+
+#main .contains .contents .name-container #input input {
+    display: block;
+    float: left;
+    width: 35%;
+    margin-left: 10%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(3, 3, 3, .1);
+}
+
+span {
+    margin: auto;
+    font-size: 10px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 3px 3px 10px #333;
+    background: rgba(3, 3, 3, .18);
+}
+
+#name-start-btn {
+    all: unset;
+}
+
+#name-start-btn {
+    width: 200px;
+    height: 30px;
+    margin: 25px 0 10px;
+
+    cursor: pointer;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    border-radius: 4px;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px #000000;
+
+    transition: transform 50ms,
+        box-shadow 50ms;
+}
+
+#name-start-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px #000;
+}
