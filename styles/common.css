@@ -1,0 +1,20 @@
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
+
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    /*color: #999;*/
+    font-size: 18px;
+    /*line-height: 1.4;*/
+    /*font-family: '궁서', '궁서체', 'GungSeo', cursive;*/
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

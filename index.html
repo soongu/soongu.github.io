@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first website</title>
+
+    <!--    파비콘 삽입   -->
+    <link rel="icon" href="favicon.ico">
+
+    <!--    custom css  -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo image">
+            </a>
+        </h1>
+        <h2 class="intro">WELCOME</h2>
+        <a href="#" class="menu-open">
+            <span class="menu-txt">MENU</span>
+            <span class="bar-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </a>
+
+        <nav class="gnb">
+            <a href="#" class="close">
+                <i class="fas fa-times"></i>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Favorite</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="visual">
+        <div class="overlay"></div>
+        <div class="txt">
+            <p>Creative design with Hong Studio</p>
+            <h3>
+                Website & APP, <br>Responsive Web and <br>Brand Identity
+            </h3>
+            <a href="#">See the work</a>
+        </div>
+    </section>
+
+    <main>
+        <div class="main-text">
+            <h3>
+                Great experience <br>
+                build great brands.
+            </h3>
+            <p>
+                다양한 온라인 서비스들을 구축하고 운영해온 풍부한 경험으로
+                UI/UX 기획과 디자인 그리고 구축에서 운영까지, 우리 스튜디오는
+                고객의 비즈니스를 위해 수준 높은 결과물을 제작하는 크리에이티브
+                파트너(Creative Partner) 입니다.
+                <span>Soongu Hong, HONG STUDIO</span>
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="top">
+                <h3>Meet <br>Out Projects</h3>
+                <a href="#">
+                    More Projects <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+            <ul class="bottom">
+                <li>
+                    <a href="#">
+                        <img
+                                src="img/project1.jpg"
+                                alt="project1"/>
+                        <div class="name">
+                            <span>Website</span>
+                            <h3>Linkin Aviation</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img
+                                src="img/project2.jpg"
+                                alt="project2"/>
+                        <div class="name">
+                            <span>Website</span>
+                            <h3>HEESUNG LMS</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img
+                                src="img/project3.png"
+                                alt="project3"/>
+                        <div class="name">
+                            <span>Website</span>
+                            <h3>ORPHAN</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img
+                                src="img/project4.jpg"
+                                alt="project4"/>
+                        <div class="name">
+                            <span>Website</span>
+                            <h3>APMA WEB/APP</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="partners">
+            <h3>우리의 소중한 고객입니다.</h3>
+            <ul>
+                <li><img src="img/partner1.png" alt=""></li>
+                <li><img src="img/partner2.png" alt=""></li>
+                <li><img src="img/partner3.png" alt=""></li>
+                <li><img src="img/partner4.png" alt=""></li>
+                <li><img src="img/partner6.png" alt=""></li>
+                <li><img src="img/partner7.png" alt=""></li>
+                <li><img src="img/partner5.png" alt=""></li>
+                <li><img src="img/partner8.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <div class="inner">
+                <h3>당신의 프로젝트를 이야기해 주세요.</h3>
+                <p class="tel">010.1234.1234</p>
+                <p>모바일 앱/웹 디자인 및 웹 표준화 작업 <br> UI/UX설계 및 제안서 작성<br> 스프링 기반 웹사이트 구축 등을 제공합니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Hong Studio<br>사업자등록번호:123-12-12345 <br>대표자:홍길동</li>
+            <li>
+                <span>A :</span>서울 강남구 중앙정보처리교육원<br>
+                <span>T :</span>010.7270.9984<br>
+                <span>E :</span>hsg9984@gmail.com<br>
+            </li>
+            <li> &#xa9 Hong Studio 2025 <br>All Rights Reserved</li>
+        </ul>
+
+        <a href="#" id="go-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+
+
+    <script>
+      //버튼의 요소 노드 취득
+      const menuBtn = document.querySelector('header .menu-open');
+      const closeBtn = document.querySelector('.gnb .close');
+
+      const gnb = document.querySelector('.gnb');
+
+      //클릭 이벤트 생성
+      menuBtn.addEventListener('click', () => {
+        gnb.classList.add('on');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        gnb.classList.remove('on');
+      });
+
+      document.addEventListener('keyup', e => {
+        if (e.key === 'Escape') {
+          gnb.classList.toggle('on');
+        }
+      });
+    </script>
+
+</body>
+</html>

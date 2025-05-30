@@ -1,0 +1,454 @@
+@import url("common.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-size: 17px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* header style */
+header {
+    /*background: tomato;*/
+    /*border: 4px solid green;*/
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    color: #fff;
+    font-weight: 700;
+}
+
+header .logo {
+    /*border: 3px solid yellow;*/
+    flex: 1;
+}
+header .logo img {
+    height: 60px;
+}
+header .intro {
+    /*border: 3px solid blue;*/
+    flex: 4;
+    margin-left: 30px;
+}
+header .menu-open {
+    /*border: 3px solid orange;*/
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+header .menu-open .menu-txt {
+    font-size: 20px;
+    margin-right: 15px;
+}
+header .menu-open .bar-icon {
+    font-size: 33px;
+}
+header .gnb {
+    background: #000;
+    color: #666;
+    font-size: 40px;
+    padding: 70px 100px;
+
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    transition: 0.6s;
+}
+header .gnb.on {
+    right: 0;
+}
+
+header .gnb .close {
+    /*border: 3px solid yellow;*/
+    color: #fff;
+}
+header .gnb ul {
+    /*border: 3px solid aqua;*/
+    margin-right: 200px;
+}
+header .gnb ul li {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+header .gnb ul li:hover {
+    color: #fff;
+}
+
+/* section visual style */
+section.visual {
+    background: url("https://an2-img.amz.wtchn.net/image/v2/E7OmlxLKtsdNBGjba7UCSw.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1USTRNSGczTWpCeE9EQWlYU3dpY0NJNklpOTJNaTl6ZEc5eVpTOXBiV0ZuWlM4MU1EUTBPRGc0TWpNMk5Ua3lNamtpZlEuYmlNcVdIdDBmZ2oySUFFVDJVRFdlRmowZjVJU3loYkZuRmFGckNFbnZ1aw==")
+                no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+section.visual .overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+section.visual .txt {
+    /*background: red;*/
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10%;
+    text-shadow: 3px 3px 5px #000;
+    z-index: 20;
+}
+section.visual .txt h3 {
+    margin: 30px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+main {
+    background: #1b1b1b;
+    color: #fff;
+    padding: 120px 0;
+}
+
+/* main-text style */
+main .main-text {
+    /*background: orange;*/
+    width: 80%;
+    margin: 0 auto 100px;
+    font-size: 27px;
+    display: flex;
+    position: relative;
+}
+
+/*
+    소스코드에는 나타나지 않는 가상의 자식요소
+    before: 가상의 첫째자식
+    after: 가상의 막내자식
+
+    필수 속성: content속성과 display속성이 필요함
+*/
+main .main-text::before {
+    /* <div>안녕</div> */
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #ffec03;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 70px;
+}
+main .main-text::after {
+    content: '”';
+    font-size: 300px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+
+main .main-text h3 {
+    /*border: 4px solid red;*/
+    flex: 1;
+    font-weight: 700;
+}
+main .main-text p {
+    /*border: 4px solid blue;*/
+    flex: 2;
+    font-size: 25px;
+    line-height: 1.4;
+}
+main .main-text p span {
+    display: block;
+    margin-top: 30px;
+    color: #999;
+    font-size: 22px;
+}
+
+/* project style */
+main .project {
+    /*background: tomato;*/
+    margin-top: 200px;
+    margin-bottom: 60px;
+}
+main .project .top {
+    /*border: 4px solid blue;*/
+    width: 80%;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: space-between;
+}
+main .project .top h3 {
+    /*background: aqua;*/
+    font-size: 38px;
+    font-weight: 700;
+}
+main .project .top a {
+    /*background: violet;*/
+    font-size: 20px;
+}
+main .project .bottom {
+    /*border: 4px solid green;*/
+    display: flex;
+    justify-content: space-evenly;
+}
+main .project .bottom li {
+    border: 4px solid #fff;
+    width: 24%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+main .project .bottom li a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(0,0,0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .7s;
+}
+main .project .bottom li a:hover::before {
+    width: 100%;
+}
+main .project .bottom li a img {
+    width: 100%;
+}
+main .project .bottom li a .name {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    background: #1b1b1b;
+    font-size: 24px;
+    text-align: right;
+    width: 250px;
+    padding: 15px;
+
+    opacity: 0;
+}
+main .project .bottom li a:hover .name {
+    animation: show-name 1s both;
+}
+@keyframes show-name {
+    from {
+        opacity: 0;
+        bottom: -30px;
+    }
+    to {
+        opacity: 1;
+        bottom: 10px;
+    }
+}
+
+/* partners style */
+main .partners {
+    /*background: orange;*/
+    width: 80%;
+    margin: 170px auto 100px;
+}
+main .partners h3 {
+    font-size: 19px;
+    margin-bottom: 80px;
+}
+main .partners ul {
+    /*border: 4px solid greenyellow;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+main .partners ul li {
+    /*background: orangered;*/
+    /*border: 3px solid skyblue;*/
+    width: 25%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .partners ul li img {
+    opacity: 0.3;
+    transition: .4s;
+}
+main .partners ul li img:hover {
+    opacity: 1;
+}
+
+/* contact style */
+main .contact {
+    width: 90%;
+    background: url("../img/contact.jpg")
+        no-repeat center/cover fixed;
+    padding: 220px 0;
+}
+main .contact .inner {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.4;
+}
+main .contact .inner .tel {
+    font-size: 58px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+
+/* footer */
+footer {
+    background: #1b1b1b;
+    color: #999;
+    padding: 0 80px 80px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer ul li:nth-child(2) {
+    color: #eee;
+    font-size: 16px;
+    line-height: 2;
+}
+footer ul li:nth-child(2) span {
+    font-weight: 700;
+    margin-right: 10px;
+    color: #999;
+}
+
+#go-top {
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+    color: #fff;
+    font-size: 52px;
+}
+
+/* 큰 태블릿 반응형 디자인 */
+/*  1025px 미만 */
+@media (max-width: 1024px) {
+    section.visual {
+        height: 60vh;
+    }
+    header .gnb {
+        width: 80vw;
+        justify-content: center;
+    }
+    section.visual .txt {
+        font-size: 24px;
+    }
+    main .main-text {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+    }
+    main .main-text::before
+    , main .main-text::after
+    {
+        display: none;
+    }
+    main .main-text p {
+        margin-top: 100px;
+        width: 60%;
+        text-align: justify;
+    }
+
+    main .main-text p span {
+        text-align: center;
+    }
+    main .project .bottom {
+        flex-wrap: wrap;
+    }
+    main .project .bottom li {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* 작은 휴대폰 반응형 디자인 */
+/* 375px이하 */
+@media (max-width: 375px) {
+
+    body {
+        width: 100vw;
+    }
+    header {
+        padding: 15px;
+    }
+    header .intro,
+    header .menu-open .menu-txt,
+    section.content .partners,
+    section.content .contact
+    {
+        display: none;
+    }
+    header .logo img {
+        height: 40px;
+    }
+    section.visual .txt {
+        font-size: 14px;
+    }
+    section.visual .txt h3 {
+        font-size: 20px;
+    }
+    main {
+        padding: 50px 0;
+    }
+    main .main-text {
+        flex-direction: column;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    main .main-text h3 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    main .main-text p {
+        text-align: justify;
+    }
+    main .main-text p span {
+        font-size: 15px;
+    }
+    main .project {
+        margin-top: 50px;
+    }
+    main .project .top {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    main .project .top h3 {
+        font-size: 20px;
+    }
+    main .project .top h3 br {
+        display: none;
+    }
+    main .project .top a {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    main .project .bottom {
+        flex-direction: column;
+    }
+    main .project .bottom li {
+        width: 90%;
+        height: 250px;
+        margin: 0 auto 20px;
+    }
+}
+
